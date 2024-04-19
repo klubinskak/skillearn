@@ -7,7 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="ClientApp\src\app\modules\home\dashboard\components\" />
     <Folder Include="ClientApp\src\app\shared\components\" />
   </ItemGroup>
 
