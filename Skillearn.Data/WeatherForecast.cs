@@ -1,4 +1,4 @@
-namespace Skillearn.API
+namespace Skillearn.Data
 {
     public class WeatherForecast
     {

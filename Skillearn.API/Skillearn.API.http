@@ -1,4 +1,4 @@
-@Skillearn.API_HostAddress = http://localhost:5211
+@Skillearn.API_HostAddress = http://localhost:5190
 
 GET {{Skillearn.API_HostAddress}}/weatherforecast/
 Accept: application/json

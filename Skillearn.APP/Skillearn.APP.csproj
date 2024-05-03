@@ -7,7 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="ClientApp\src\app\models\" />
+    <Folder Include="ClientApp\src\app\services\" />
     <Folder Include="ClientApp\src\app\shared\components\" />
+    <Folder Include="ClientApp\src\environments\" />
   </ItemGroup>
 
 </Project>
