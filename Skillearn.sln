@@ -4,13 +4,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.8.34408.163
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Skillearn.APP", "Skillearn.APP\Skillearn.APP.csproj", "{2531553A-DAAB-41D8-B9B1-4FB48ECA83DD}"
+	ProjectSection(ProjectDependencies) = postProject
+		{7D826F6D-115F-46BC-B563-72AD05064CDD} = {7D826F6D-115F-46BC-B563-72AD05064CDD}
+		{E7B639E2-25DC-4460-9131-E9174041B117} = {E7B639E2-25DC-4460-9131-E9174041B117}
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Skillearn.API", "Skillearn.API\Skillearn.API.csproj", "{7D826F6D-115F-46BC-B563-72AD05064CDD}"
 	ProjectSection(ProjectDependencies) = postProject
 		{E7B639E2-25DC-4460-9131-E9174041B117} = {E7B639E2-25DC-4460-9131-E9174041B117}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skillearn.Data", "Skillearn.Data\Skillearn.Data.csproj", "{E7B639E2-25DC-4460-9131-E9174041B117}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Skillearn.Data", "Skillearn.Data\Skillearn.Data.csproj", "{E7B639E2-25DC-4460-9131-E9174041B117}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -27,13 +27,10 @@ builder.Services.AddCors(options =>
     options.AddPolicy("CorsAllowSpecific",
     builder =>
     {
-        //builder.AllowAnyMethod()
-        //.AllowAnyHeader()
-        //.AllowCredentials()
-        //.WithOrigins(configuration.GetSection("AllowedHosts:Host").Get<string[]>());
-        builder.WithOrigins(configuration["AllowedHosts"])
-                           .AllowAnyMethod()
-                           .AllowAnyHeader();
+        builder.AllowAnyMethod()
+        .AllowAnyHeader()
+        .AllowAnyOrigin();
+
     });
 });
 
@@ -45,6 +42,7 @@ builder.Services.AddSwaggerGen();
 //services
 builder.Services.AddScoped<IUser, UserLogic>();
 builder.Services.AddScoped<ICourse, CourseLogic>();
+builder.Services.AddScoped<IRole, RoleLogic>();
 
 
 
@@ -62,10 +60,11 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseCors("CorsAllowSpecific");
 
 
 app.UseHttpsRedirection();
+
+app.UseCors("CorsAllowSpecific");
 
 app.UseAuthorization();
 

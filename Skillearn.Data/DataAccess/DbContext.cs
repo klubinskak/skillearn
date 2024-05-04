@@ -14,8 +14,10 @@ namespace Skillearn.Data.Data
             _database = client.GetDatabase(databaseName);
         }
 
-        public IMongoCollection<User> Users => _database.GetCollection<User>("users");
+        public IMongoCollection<UserModel> Users => _database.GetCollection<UserModel>("users");
         public IMongoCollection<Course> Courses => _database.GetCollection<Course>("courses");
+        public IMongoCollection<RoleModel> Roles => _database.GetCollection<RoleModel>("roles");
+
 
     }
 }

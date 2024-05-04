@@ -4,6 +4,7 @@ namespace Skillearn.Data.Logic.Interfaces
 {
     public interface IUser
     {
-        public List<User> GetAllUsers();
+        public List<UserModel> GetAllUsers();
+        public UserModel UpdateUser(UserModel model);
     }
 }

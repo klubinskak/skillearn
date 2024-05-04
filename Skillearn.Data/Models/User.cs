@@ -3,7 +3,7 @@ using MongoDB.Bson.Serialization.Attributes;
 
 namespace Skillearn.Data.Models
 {
-    public class User
+    public class UserModel
     {
         [BsonRepresentation(BsonType.ObjectId)]
         public string Id { get; set; }

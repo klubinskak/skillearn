@@ -20,7 +20,14 @@ namespace Skillearn.API.Controllers
         [HttpGet("getAllUsers")]
         public IActionResult GetAllUsers()
         {
-           List<User> returnModel = _userLogic.GetAllUsers();
+           List<UserModel> returnModel = _userLogic.GetAllUsers();
+            return Ok(returnModel);
+        }
+
+        [HttpPost("updateUser")]
+        public IActionResult UpdateUser([FromBody] UserModel model)
+        {
+            UserModel returnModel = _userLogic.UpdateUser(model);
             return Ok(returnModel);
         }
     }
