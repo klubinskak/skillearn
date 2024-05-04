@@ -1,0 +1,93 @@
+<p-card header="Users">
+
+
+  <p-table #dt1
+           [value]="users"
+           dataKey="id"
+           [rows]="10"
+           [showCurrentPageReport]="true"
+           [rowsPerPageOptions]="[10, 25, 50]"
+           [loading]="loading"
+           [paginator]="true"
+           currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+           [globalFilterFields]="['name', 'department', 'country', 'role']">
+    <ng-template pTemplate="caption">
+      <div class="flex">
+        <button pButton label="Clear" class="p-button-outlined" icon="pi pi-filter-slash" (click)="clear(dt1)"></button>
+        <span class="p-input-icon-left ml-auto">
+          <i class="pi pi-search"></i>
+          <input pInputText type="text" (input)="dt1.filterGlobal(getEventValue($event), 'contains')" placeholder="Search keyword" />
+        </span>
+      </div>
+    </ng-template>
+    <ng-template pTemplate="header">
+      <tr>
+        <th style="min-width:15rem">
+          <div class="flex align-items-center">
+            Name
+          </div>
+        </th>
+        <th style="min-width:15rem">
+          <div class="flex align-items-center">
+            Country
+          </div>
+        </th>
+        <th style="min-width:15rem">
+          <div class="flex align-items-center">
+            Role
+          </div>
+        </th>
+        <th style="min-width:10rem">
+          <div class="flex align-items-center">
+            Date
+          </div>
+        </th>
+        <th style="min-width:10rem">
+          <div class="flex align-items-center">
+            Balance
+          </div>
+        </th>
+        <th style="min-width:15rem">
+          <div class="flex align-items-center">
+            Department
+          </div>
+        </th>
+        <th>
+        </th>
+        <th>
+        </th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-user>
+      <tr>
+        <td>
+          <span class="ml-1 vertical-align-middle">{{ user.name }}</span>
+        </td>
+        <td>
+          <span class="ml-1 vertical-align-middle">{{user.country}}</span>
+        </td>
+        <td>
+          <span class="ml-1 vertical-align-middle">{{ user.role }}</span>
+        </td>
+        <td>
+        </td>
+        <td>
+        </td>
+        <td>
+          <span class="ml-1 vertical-align-middle">{{ user.department }}</span>
+        </td>
+        <td>
+          <p-button (click)="navigate(user)" label="" icon="pi pi-pen-to-square" severity="secondary"></p-button>
+        </td>
+        <td class="text-center">
+          <!--<i class="pi" [ngClass]="{ 'text-green-500 pi-check-circle': customer.verified, 'text-red-500 pi-times-circle': !customer.verified }"></i>-->
+        </td>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="emptymessage">
+      <tr>
+        <td colspan="7">No customers found.</td>
+      </tr>
+    </ng-template>
+  </p-table>
+</p-card>

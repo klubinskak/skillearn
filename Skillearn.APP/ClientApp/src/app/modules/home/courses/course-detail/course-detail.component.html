@@ -1,0 +1,48 @@
+<div class="flex flex-column gap-3">
+  <p-card class="customize-card">
+    <div class="flex">
+      <div class="flex-2 max-h-25rem">
+        <span>
+          <h2 class="text-5xl m-0">{{courseDetail.title}}  </h2> <p-tag value="New" *ngIf=""></p-tag>
+        </span>
+
+        <p class="text-xl">{{courseDetail.description}}</p>
+        <p-rating [(ngModel)]="courseDetail.rating[0].value" [cancel]="false"></p-rating>
+        <p>Created by {{courseDetail.instructor}}</p>
+
+        <div class="flex gap-3">
+          <span class="flex justify-center align-items-center gap-2">
+            <i class="pi pi-calendar" style="color: black"></i>
+            <p> Last updated {{courseDetail.updatedAt | date: 'yyyy/MM'}} </p>
+          </span>
+          <span class="flex justify-center align-items-center gap-2">
+            <i class="pi pi-language" style="color: black"></i>
+            <p> {{courseDetail.language}} </p>
+          </span>
+        </div>
+        <div class="flex gap-3 pt-8">
+          <p-button label="Save" [icon]="'pi pi-bookmark'" [rounded]="true" severity="secondary"></p-button>
+          <p-button label="Enroll" [rounded]="true" severity="secondary"></p-button>
+        </div>
+
+
+      </div>
+      <div class="flex-3 max-h-25rem">
+        <img src={{courseDetail.image}} alt="course.title" class="border-round w-full" style="height: 100%" />
+      </div>
+    </div>
+  </p-card>
+  <div class="py-3">
+    <h3 class="text-2xl">Requirements</h3>
+  </div>
+  <div class="py-3">
+    <h3 class="text-2xl">Description</h3>
+  </div>
+  <p-card header="What you'll learn">
+
+  </p-card>
+  <div class="py-3">
+    <h3 class="text-2xl">People also choose</h3>
+    <app-course-card [course]="courseDetail"></app-course-card>
+  </div>
+</div>
