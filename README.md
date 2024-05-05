@@ -6,9 +6,9 @@
 
 <p>Tech stack:</p>
 <ul>
-  <li>Angular</li>
+  <li>Angular 16.2.5</li>
     <li>PrimeNG</li>
   <li>PrimeFlex</li>
-    <li>ASP NET Core</li>
+    <li>ASP NET Core 7.0</li>
   <li>MongoDB</li>
 </ul>
