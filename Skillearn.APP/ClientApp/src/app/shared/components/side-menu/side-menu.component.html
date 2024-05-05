@@ -1,5 +1,5 @@
-<div class="card flex justify-content-center">
-  <p-sidebar #sidebarRef [(visible)]="sidebarVisible" [modal]="false">
+<div class="card flex">
+  <p-sidebar #sidebarRef [(visible)]="sidebarVisible" [modal]="false"  [style]="{width:'15em'}"> 
     <ng-template pTemplate="headless">
       <div class="flex flex-column h-full">
         <div class="flex align-items-center justify-content-between px-4 pt-3 flex-shrink-0">
@@ -34,22 +34,22 @@
         </div>
 
 
-        <p-menu [model]="items" class="w-full bg-black">
+        <p-menu [model]="items" class="w-full">
           <ng-template pTemplate="item" let-item>
-            <a *ngIf="!item?.url" [attr.tabindex]="-1" class="p-menuitem-link flex justify-content-between align-items-center p-3" [routerLink]="item.routerLink">
-              <div>
+            <a *ngIf="!item?.url" [attr.tabindex]="-1" class="p-menuitem-link flex justify-content-between align-items-center p-3 w-full" [routerLink]="item.routerLink">
+              <div class="w-full">
                 <span [class]="item.icon"></span>
-                <span> {{ item.label }}</span>
+                <span class="w-full"> {{ item.label }}</span>
               </div>
               <div>
                 <span *ngIf="item.shortcut" [class]="item.shortcutClass">{{ item.shortcut }}</span>
                 <p-badge *ngIf="item.badge" [value]="item.badge" [severity]="item.badgeSeverity"></p-badge>
               </div>
             </a>
-            <a *ngIf="item?.url" [attr.tabindex]="-1" class="p-menuitem-link flex justify-content-between align-items-center p-3" [attr.href]="item.url">
-              <div>
+            <a *ngIf="item?.url" [attr.tabindex]="-1" class="w-full p-menuitem-link flex justify-content-between align-items-center p-3" [attr.href]="item.url">
+              <div class="w-full">
                 <span [class]="item.icon"></span>
-                <span> {{ item.label }}</span>
+                <span class="w-full"> {{ item.label }}</span>
               </div>
               <div>
                 <span *ngIf="item.shortcut" [class]="item.shortcutClass">{{ item.shortcut }}</span>
