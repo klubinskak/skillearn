@@ -1,68 +1,89 @@
-<div>
-  <h1>Dashboard</h1>
-<div class="grid h-full">
-  <div class="col-8">
-    <div class="flex flex-column gap-6">
-
-      <div class="flex justify-content-center flex-wrap	gap-3">
-        <p-card [style]="{ width: '300px' }">
-          <h3>724</h3>
-          <p>Hours spent</p>
-        </p-card>
-
-        <div class="background border-round-lg" [style]="{ width: '300px'}"  style="background-image: url('assets/card.png');">
-          <div>
+<div class="grid container p-3">
+  <div class="col-7">
+    <div
+      class="grid"
+    >
+    <p-card class="col">
+      <div class="w-full flex justify-content-center gap-8">
+        <div>
+          <div class="p-5 px-8 border-round-2xl text-white flex flex-column align-items-center" style="background-color: #080808; max-height: 10rem; max-width: 16rem;">
             <h3>724</h3>
-            <p>Hours spent</p>
+            <p class="w-full" style="white-space: nowrap;">Hours spent</p>
           </div>
         </div>
-
-
-
-
-
-
-        <p-card [style]="{ width: '300px'}" class="border-round-lg">
-          <h3>724</h3>
-          <p>Hours spent</p>
-        </p-card>
+    
+        <div>
+          <div class="p-5 px-8 border-round-2xl text-white flex flex-column align-items-center" style="background-color: #080808; max-height: 10rem; max-width: 16rem;">
+            <h3>321</h3>
+            <p class="w-full" style="white-space: nowrap;">Courses enrolled</p>
+          </div>
+        </div>
       </div>
+    </p-card>
+    
+    
+    </div>
 
-      <p-card header="Your Assignments">
-        <p>sds</p>
-      </p-card>
-
-      <p-card header="Top Pick For You">
-        <p-carousel [value]="courses" [numVisible]="3" [numScroll]="3" [circular]="true" [responsiveOptions]="responsiveOptions">
-          <ng-template let-course pTemplate="item">
-            <a routerLink="courses/{{course.id}}" style="text-decoration:none;">
-              <div class="border-1  surface-border border-round m-2 text-center pb-2" style="height: 400px;">
-                <img src="{{ course.image }}" [alt]="course.name" class="shadow-2" style="height: 200px; width: 100%; object-fit: cover;" />
-                <div>
-                  <h4 class="mb-1" style="color: #495057; height: 50px;">{{ course.title }}</h4>
-                  <p-tag [value]="course.inventoryStatus"></p-tag>
-                  <div class="m-5 flex justify-content-end	 align-items-center justify-content-center gap-2">
-                    <p-button icon="pi pi-star-fill" [rounded]="true" severity="secondary" />
-                    <p-button icon="pi pi-chevron-right" [rounded]="true" />
-                  </div>
+    <p-card header="Top Pick For You" class="col-10 w-full flex-grow-1">
+      <p-carousel
+        [value]="courses"
+        [numVisible]="3"
+        [numScroll]="3"
+        [circular]="true"
+        [responsiveOptions]="responsiveOptions"
+      >
+        <ng-template let-course pTemplate="item">
+          <a routerLink="courses/{{ course.id }}" style="text-decoration: none">
+            <div
+              class="border-1 surface-border border-round m-2 text-center pb-2"
+              style="height: 400px"
+            >
+              <img
+                src="{{ course.image }}"
+                [alt]="course.name"
+                class="shadow-2"
+                style="height: 200px; width: 100%; object-fit: cover"
+              />
+              <div>
+                <h4 class="mb-1" style="color: #495057; height: 50px">
+                  {{ course.title }}
+                </h4>
+                <p-tag [value]="course.inventoryStatus"></p-tag>
+                <div
+                  class="m-5 flex justify-content-end align-items-center justify-content-center gap-2"
+                >
+                  <p-button
+                    icon="pi pi-star-fill"
+                    [rounded]="true"
+                    severity="secondary"
+                  />
+                  <p-button icon="pi pi-chevron-right" [rounded]="true" />
                 </div>
               </div>
-            </a>
-          </ng-template>
-        </p-carousel>
-      </p-card>
-
-
-    </div>
-  </div>
-
-  <div class="col-4">
-    <div class="card flex justify-content-center">
-      <p-calendar class="max-w-full" [(ngModel)]="date" [inline]="true" [showWeek]="true" class="border-none" (ngModelChange)="onDateChange($event)"></p-calendar>
-    </div>
-    <p-card header="Your Assignments">
-      <p>{{ date | date:'dd MMMM yyyy' }}</p>      <!--<app-scheduler></app-scheduler>-->
+            </div>
+          </a>
+        </ng-template>
+      </p-carousel>
     </p-card>
   </div>
-</div>
+
+  <div class="card col-5 ">
+    <p-card class="">
+      <p-calendar
+      class="p-8"
+      [(ngModel)]="date"
+      [inline]="true"
+      [showWeek]="false"
+      class="border-none flex justify-content-center"
+      (ngModelChange)="onDateChange($event)"
+    ></p-calendar>
+    </p-card>
+
+    <div class="col-6 gap-2 justify-content-end w-full">
+      <p-card header="Your Assignments">
+        <p>{{ date | date : "dd MMMM yyyy" }}</p>
+        <app-scheduler></app-scheduler>
+      </p-card>
+    </div>
+  </div>
 </div>
