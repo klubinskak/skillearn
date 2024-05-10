@@ -9,12 +9,13 @@ import { RouterModule } from '@angular/router';
 import { CarouselModule } from 'primeng/carousel';
 import { TagModule } from 'primeng/tag';
 import { KnobModule } from 'primeng/knob';
+import { SchedulerComponent } from './components/scheduler/scheduler.component';
 
 
 @Component({
   selector: 'app-dashboard',
   standalone: true,
-  imports: [CardModule, CalendarModule, FormsModule, CommonModule, RouterModule, CarouselModule, TagModule, KnobModule],
+  imports: [CardModule, CalendarModule, FormsModule, CommonModule, RouterModule, CarouselModule, TagModule, KnobModule, SchedulerComponent],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.scss'
 })

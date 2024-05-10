@@ -1,0 +1,15 @@
+<div class="grid">
+    <div class="col-3 surface-ground">
+      <div class="hour-row p-2" *ngFor="let hour of hours">
+        {{ hour }}
+        <div class="task-info">
+          <div *ngFor="let task of tasks[hour]">
+            <p>{{ task.title }}</p>
+            <p>{{ task.description }}</p>
+            <p>{{ task.date }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

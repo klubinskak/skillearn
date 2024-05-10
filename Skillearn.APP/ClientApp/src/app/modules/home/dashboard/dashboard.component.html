@@ -1,24 +1,30 @@
-<div class="grid container">
-  <div class="col-12">
-    <h1>Dashboard</h1>
-  </div>
-  <div class="col-7 flex flex-column">
-    <div class="grid justify-content-center gap-3" [style]="{ width:'80em', 'max-width': '100%', 'height': '40%'}" >
-      <p-card class="col-5">
-        <h3>724</h3>
-        <p>Hours spent</p>
-      </p-card>
-
-
-      <p-card class="col-5">
-        <h3>724</h3>
-        <p>Hours spent</p>
-      </p-card>
-
+<div class="grid container p-3">
+  <div class="col-7">
+    <div
+      class="grid"
+    >
+    <p-card class="col">
+      <div class="w-full flex justify-content-center gap-8">
+        <div>
+          <div class="p-5 px-8 border-round-2xl text-white flex flex-column align-items-center" style="background-color: #080808; max-height: 10rem; max-width: 16rem;">
+            <h3>724</h3>
+            <p class="w-full" style="white-space: nowrap;">Hours spent</p>
+          </div>
+        </div>
+    
+        <div>
+          <div class="p-5 px-8 border-round-2xl text-white flex flex-column align-items-center" style="background-color: #080808; max-height: 10rem; max-width: 16rem;">
+            <h3>321</h3>
+            <p class="w-full" style="white-space: nowrap;">Courses enrolled</p>
+          </div>
+        </div>
+      </div>
+    </p-card>
+    
+    
     </div>
 
-   <div class="grid justify-content-around">
-    <p-card header="Top Pick For You" class="col-10"  [style]="{ width:'80em', 'max-width': '100%', 'height': '150%'}">
+    <p-card header="Top Pick For You" class="col-10 w-full flex-grow-1">
       <p-carousel
         [value]="courses"
         [numVisible]="3"
@@ -59,26 +65,25 @@
         </ng-template>
       </p-carousel>
     </p-card>
-   </div>
   </div>
 
-  <div class="col-5">
-    <p-calendar
-      class="max-w-full"
+  <div class="card col-5 ">
+    <p-card class="">
+      <p-calendar
+      class="p-8"
       [(ngModel)]="date"
       [inline]="true"
-      [showWeek]="true"
-      class="border-none"
+      [showWeek]="false"
+      class="border-none flex justify-content-center"
       (ngModelChange)="onDateChange($event)"
     ></p-calendar>
+    </p-card>
 
     <div class="col-6 gap-2 justify-content-end w-full">
       <p-card header="Your Assignments">
         <p>{{ date | date : "dd MMMM yyyy" }}</p>
-        <!--<app-scheduler></app-scheduler>-->
+        <app-scheduler></app-scheduler>
       </p-card>
     </div>
-
   </div>
-
 </div>

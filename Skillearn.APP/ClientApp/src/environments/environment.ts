@@ -6,7 +6,7 @@ export const environment = {
   appName: "",
   production: true,
   useAuthPopup: false,
-  apiBaseUrl: "https://localhost:44305",
+  apiBaseUrl: "https://localhost:7179",
   apiBaseUrlMock: "",
   baseUrl: "",
   environmentName: 'LOCAL'
