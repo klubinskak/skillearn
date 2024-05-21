@@ -7,12 +7,14 @@
 Skillearn is your all-in-one learning hub for companies. Tailor-made for organizational success, our platform allows employers to assign customized classes to specific departments. Administrators wield the power to allocate courses, fostering efficient skill development across the organization.
 
 🔥 Key Features:
+<ul>
+  <ol><strong>Customized Learning Paths: </strong> Craft personalized learning journeys for each team. From sales to IT, Skillearn adapts to your needs.</ol>
+<ol><strong>Efficient Course Allocation:</strong> Empower administrators to allocate courses seamlessly. No more manual tracking—let Skillearn handle it.</ol>
+<ol><strong>Skill Development Made Easy: </strong>Whether it’s leadership, technical skills, or soft skills, Skillearn accelerates growth.</ol>
+<ol><strong>Collaborative Learning:<strong/> Foster knowledge sharing among colleagues. Discussion forums, live sessions, and peer learning—Skillearn brings teams together.</ol>
+<ol><strong>Analytics Dashboard:<strong/> Track progress, completion rates, and skill gaps. Data-driven insights for informed decisions.</ol>
 
-Customized Learning Paths: Craft personalized learning journeys for each team. From sales to IT, Skillearn adapts to your needs.
-Efficient Course Allocation: Empower administrators to allocate courses seamlessly. No more manual tracking—let Skillearn handle it.
-Skill Development Made Easy: Whether it’s leadership, technical skills, or soft skills, Skillearn accelerates growth.
-Collaborative Learning: Foster knowledge sharing among colleagues. Discussion forums, live sessions, and peer learning—Skillearn brings teams together.
-Analytics Dashboard: Track progress, completion rates, and skill gaps. Data-driven insights for informed decisions.
+</ul>
 
 <p>Tech stack:</p>
 <ul>
