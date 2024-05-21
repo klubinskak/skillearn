@@ -1,7 +1,6 @@
 <h3>Project status: in progress 🪫</h3>
 
-<h2>
-Skillearn: Empowering Workplace Learning
+<h2>Skillearn: Empowering Workplace Learning </h2>
 
 🚀 Unlock Your Team’s Potential!
 
@@ -13,7 +12,7 @@ Customized Learning Paths: Craft personalized learning journeys for each team. F
 Efficient Course Allocation: Empower administrators to allocate courses seamlessly. No more manual tracking—let Skillearn handle it.
 Skill Development Made Easy: Whether it’s leadership, technical skills, or soft skills, Skillearn accelerates growth.
 Collaborative Learning: Foster knowledge sharing among colleagues. Discussion forums, live sessions, and peer learning—Skillearn brings teams together.
-Analytics Dashboard: Track progress, completion rates, and skill gaps. Data-driven insights for informed decisions.</h2>
+Analytics Dashboard: Track progress, completion rates, and skill gaps. Data-driven insights for informed decisions.
 
 <p>Tech stack:</p>
 <ul>
