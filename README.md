@@ -28,6 +28,6 @@ Skillearn is your all-in-one learning hub for companies. Tailor-made for organiz
 </ul>
 
 
-![Screenshot 2024-05-26 at 19 50 04 (2)](https://github.com/klubinskak/skillearn/assets/76222513/7fda7f3b-2c0e-42f4-98de-63471e647bc3)
+![Screenshot 2024-05-26 at 19 52 04 (2)](https://github.com/klubinskak/skillearn/assets/76222513/16453be2-2889-4fb6-98d9-08d9fb48b910)
 
 
