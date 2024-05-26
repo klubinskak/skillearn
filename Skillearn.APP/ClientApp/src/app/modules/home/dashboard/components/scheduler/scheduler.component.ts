@@ -3,7 +3,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { TaskModel } from '../../../../../models/task';
 import { Observable } from 'rxjs';
 import {toObservable} from '@angular/core/rxjs-interop'
-import { buttonActionSignal, dateChangeSignal } from '../../../../../services/signals.service';
+import { dateChangeSignal } from '../../../../../services/signals.service';
 import { TaskService } from '../../../../../services/task.service';
 import { DateTime } from 'luxon';
 import { ButtonModule } from 'primeng/button';

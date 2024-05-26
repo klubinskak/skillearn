@@ -20,7 +20,7 @@ export class AppComponent implements OnInit {
 
     });
   }
-  title = 'ClientApp';
+  title = 'Skillearn';
   public pageName = '';
 
 

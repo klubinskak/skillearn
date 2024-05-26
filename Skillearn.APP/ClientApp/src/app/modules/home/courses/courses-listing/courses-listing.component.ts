@@ -37,7 +37,6 @@ export class CoursesListingComponent implements OnInit{
     this.courseService.getAllCourses().subscribe((res: CourseModel[]) => {
       if(res){
         this.isLoading = false;
-        console.log('is', this.isLoading)
         this.courses = res;
       }
     })
