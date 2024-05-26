@@ -11,16 +11,9 @@ import { ButtonModule } from 'primeng/button';
   styleUrl: './login.component.scss'
 })
 export class LoginComponent implements OnInit{
-  // private buttonActionSignal$: Observable<string> = toObservable(buttonActionSignal);
-  
 
   ngOnInit(): void {
-    // this.buttonActionSignal$.subscribe((res: string) => {
-    //   console.log('res', res);
-    // })
-effect(() => {
-  console.log();
-});
-  }
+  }  
+
 
 }

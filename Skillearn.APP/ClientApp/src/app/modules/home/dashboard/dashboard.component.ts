@@ -28,11 +28,6 @@ export class DashboardComponent implements OnInit {
   courses: CourseModel[] = [];
   selectedDate: Date  = new Date();
 
-  //chart
-  data: any;
-  options: any;
-
-
   responsiveOptions: any[] | undefined;
 
   procentages: number = 40;
@@ -59,25 +54,7 @@ export class DashboardComponent implements OnInit {
         numVisible: 1,
         numScroll: 1
       }
-    ];
-
-    //chart 
-    const documentStyle = getComputedStyle(document.documentElement);
-        const textColor = documentStyle.getPropertyValue('--text-color');
-
-        this.data = {
-            labels: ['A', 'B', 'C'],
-            datasets: [
-                {
-                    data: [540, 325, 702],
-                    backgroundColor: [documentStyle.getPropertyValue('--blue-500'), documentStyle.getPropertyValue('--yellow-500'), documentStyle.getPropertyValue('--green-500')],
-                    hoverBackgroundColor: [documentStyle.getPropertyValue('--blue-400'), documentStyle.getPropertyValue('--yellow-400'), documentStyle.getPropertyValue('--green-400')]
-                }
-            ]
-        };
-
-        
-
+    ];  
   }
 
   loadData() {
