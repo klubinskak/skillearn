@@ -3,7 +3,9 @@ export class TaskModel {
     title: string = '';
     description: string = '';
     isDone: boolean = false;
-    date: Date = new Date();
+    date: string = '';
     userId: number = 0;
     entity: string = '';
+    startTime: string = '';
+    endTime: string = '';
   }

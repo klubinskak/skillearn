@@ -16,9 +16,35 @@
 }
 
 .container{
-  overflow-x: hidden;
+  max-height: 100vh;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 .background {
   opacity: 0.9;
+}
+
+
+.demo-inline-calendar-card {
+  width: 100%;
+  max-height: 100%;
+}
+
+.gradient-box {
+  background: linear-gradient(135deg, #89f7fe 0%, #a68cff 100%);
+  border-radius: 20px;
+  width: 100%;
+  max-width: fit-content;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2); 
+}
+
+.p-carousel {
+  height: auto !important;
+}
+
+
+::ng-deep .mat-calendar-body-selected {
+  background-color: #edf2f4 !important;
+  color: #edf2f4 !important;
 }

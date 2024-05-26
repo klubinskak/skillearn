@@ -1,3 +1,40 @@
 .p-sidebar-mask{
     background-color: transparent;
 }
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Ensures the body and html take the full height */
+    overflow: hidden; /* Prevents body scrolling */
+  }
+
+.grid {
+    display: grid;
+    grid-template-columns: auto 1fr; /* Adjusts grid columns */
+  }
+  
+  .col-2 {
+    width: 250px; /* Set the desired width if necessary */
+  }
+  
+  .col {
+    overflow: hidden; /* Ensure the content doesn't overflow */
+  }
+  
+  .col {
+    overflow: hidden; /* Ensures no overflow in the main content */
+  }
+  
+  @media (max-width: 768px) {
+    .col-2 {
+      width: 200px; /* Adjust width for smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .col-2 {
+      width: 150px; /* Further adjust for very small screens */
+    }
+  }
+  

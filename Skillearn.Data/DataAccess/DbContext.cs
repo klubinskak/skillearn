@@ -17,7 +17,7 @@ namespace Skillearn.Data.Data
         public IMongoCollection<UserModel> Users => _database.GetCollection<UserModel>("users");
         public IMongoCollection<Course> Courses => _database.GetCollection<Course>("courses");
         public IMongoCollection<RoleModel> Roles => _database.GetCollection<RoleModel>("roles");
-
-
+        public IMongoCollection<TaskModel> Tasks => _database.GetCollection<TaskModel>("tasks");
+        public IMongoCollection<UserCourses> UserCourses => _database.GetCollection<UserCourses>("user_courses");
     }
 }

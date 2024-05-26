@@ -11,11 +11,13 @@ namespace Skillearn.Data.Logic
     public class CourseLogic :ICourse 
     {
         private readonly IMongoCollection<Course> _courseCollection;
+        private readonly IMongoCollection<UserCourses> _userCoursesCollection;
         private readonly DBContext _ctx;
 
-        public CourseLogic(DBContext context, DBContext ctx)
+        public CourseLogic(DBContext ctx)
         {
-            _courseCollection = context.Courses;
+            _courseCollection = ctx.Courses;
+            _userCoursesCollection = ctx.UserCourses;
             _ctx = ctx;
         }
 
@@ -47,6 +49,11 @@ namespace Skillearn.Data.Logic
         public Course GetCourseDetail(string courseId)
         {
             return _courseCollection.Find(course => course.Id == courseId).FirstOrDefault();
+        }
+
+        public List<UserCourses> GetUserCourses(int userId)
+        {
+            return _userCoursesCollection.Find(item => item.UserId == userId).ToList();
         }
     }
 };

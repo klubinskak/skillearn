@@ -43,6 +43,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IUser, UserLogic>();
 builder.Services.AddScoped<ICourse, CourseLogic>();
 builder.Services.AddScoped<IRole, RoleLogic>();
+builder.Services.AddScoped<ITask, TaskLogic>();
 
 
 

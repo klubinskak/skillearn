@@ -1,0 +1,37 @@
+::ng-deep .p-datepicker {
+    max-width: 350px;
+    max-height: 250px; /* Set the maximum width of the entire calendar */
+  }
+  
+  ::ng-deep .p-datepicker table td > span {
+    max-width: 250px; /* Set the maximum width of individual date cells */
+  }
+  
+  ::ng-deep .p-datepicker table td.p-datepicker-today > span {
+    background-color: gray; 
+    color: white;
+  }
+  
+  /* Define a CSS class to set the width of the h5 element */
+.hour-header {
+  width: 10%; /* Adjust the width as needed */
+}
+
+/* Optionally, you can adjust the width of the hr element for better alignment */
+hr {
+  width: 80%; /* Adjust the width as needed */
+  margin-top: 0.5rem; /* Add some spacing between the hr and the content */
+  border: none; /* Remove default hr border */
+  border-top: 1px solid #ccc; 
+}
+
+
+.transparent-button{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.task-background{
+  background-color: #011936;
+}

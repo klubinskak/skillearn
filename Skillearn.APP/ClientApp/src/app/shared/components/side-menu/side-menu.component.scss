@@ -2,3 +2,11 @@
   border: none !important; /* Remove border */
   box-shadow: none !important; /* Remove box shadow */
 }
+
+:host ::ng-deep .p-submenu-header {
+  background-color: #161616 !important;
+  color: white;
+}
+
+
+

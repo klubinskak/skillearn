@@ -16,6 +16,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Skillearn.API", "Skillearn.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Skillearn.Data", "Skillearn.Data\Skillearn.Data.csproj", "{E7B639E2-25DC-4460-9131-E9174041B117}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skillearn.Tests", "Skillearn.Tests\Skillearn.Tests.csproj", "{E3E76205-827F-451C-9855-8A2BC2589D58}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -34,6 +36,10 @@ Global
 		{E7B639E2-25DC-4460-9131-E9174041B117}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E7B639E2-25DC-4460-9131-E9174041B117}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E7B639E2-25DC-4460-9131-E9174041B117}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3E76205-827F-451C-9855-8A2BC2589D58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3E76205-827F-451C-9855-8A2BC2589D58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3E76205-827F-451C-9855-8A2BC2589D58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3E76205-827F-451C-9855-8A2BC2589D58}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

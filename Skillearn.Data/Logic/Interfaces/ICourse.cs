@@ -7,5 +7,6 @@ namespace Skillearn.Data.Logic.Interfaces
         public List<Course> GetAllCourses();
         public List<Course> GetTopCourses(int limit);
         public Course GetCourseDetail(string courseId);
+        public List<UserCourses> GetUserCourses(int userId);
     }
 }
