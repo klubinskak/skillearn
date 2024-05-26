@@ -10,9 +10,9 @@ namespace Skillearn.Data.Logic
         private readonly IMongoCollection<UserModel> _userCollection;
         private readonly DBContext _ctx;
 
-        public UserLogic(DBContext context, DBContext ctx)
+        public UserLogic(DBContext ctx)
         {
-            _userCollection = context.Users;
+            _userCollection = ctx.Users;
             _ctx = ctx;
         }
 

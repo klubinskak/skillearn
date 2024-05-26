@@ -1,19 +1,19 @@
 import { Component, OnInit } from '@angular/core';
-import { UserModel } from '../../../models/users';
+import { UserModel } from '../../../../models/users';
 import { CommonModule } from '@angular/common';
 import { Table, TableModule } from 'primeng/table';
-import { UserService } from '../../../services/user.service';
+import { UserService } from '../../../../services/user.service';
 import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
 import { Router, RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-users',
+  selector: 'app-users-listing',
   standalone: true,
   imports: [CommonModule, TableModule, InputTextModule, ButtonModule, CardModule, RouterModule],
-  templateUrl: './users.component.html',
-  styleUrl: './users.component.scss',
+  templateUrl: './users-listing.component.html',
+  styleUrl: './users-listing.component.scss',
 })
 export class UsersComponent implements OnInit {
   users!: UserModel[];

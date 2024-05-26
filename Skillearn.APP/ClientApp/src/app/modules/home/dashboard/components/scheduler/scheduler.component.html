@@ -1,15 +1,62 @@
-<div class="grid">
-    <div class="col-3 surface-ground">
-      <div class="hour-row p-2" *ngFor="let hour of hours">
-        {{ hour }}
-        <div class="task-info">
-          <div *ngFor="let task of tasks[hour]">
-            <p>{{ task.title }}</p>
-            <p>{{ task.description }}</p>
-            <p>{{ task.date }}</p>
-          </div>
+<div class="container">
+  <div class="row">
+    <div class="col" *ngFor="let hour of hours">
+      <div class="w-full flex gap-6">
+        <h5 class="white-space-nowrap hour-header">{{ hour }}</h5>
+        <span class="border-right-1 border-300"></span>
+        <div class="flex w-full">
+          <ng-container
+            *ngFor="let task of getTasksForHour(hour); let i = index"
+          >
+            <div
+              *ngIf="i < 2"
+              class="task border-round-xl task-background w-full m-2"
+            >
+              <p class="text-white text-center text-xs">
+                {{ task.startTime }} - {{ task.endTime }}
+              </p>
+              <p class="text-white text-center">
+                <strong>{{ task.title }}</strong>
+              </p>
+            </div>
+          </ng-container>
         </div>
+      </div>
+      <div
+        class="text-xs w-full text-center"
+        *ngIf="getTasksForHour(hour).length > 2"
+      >
+      <button
+      class="transparent-button p-2"
+      (click)="showDialog('bottomright', hour)"> Show more 
+      +{{getTasksForHour(hour).length - 2}}
+    </button>
       </div>
     </div>
   </div>
-  
+
+  <div class="card flex flex-column align-items-center gap-2">
+    <p-dialog
+      [header]="selectedHour"
+      [modal]="true"
+      [position]="position"
+      [(visible)]="visible"
+      [style]="{ width: '25rem' }"
+    >
+    <ng-container
+    *ngFor="let task of getTasksForHour(selectedHour)"
+  >
+    <div
+      class="task border-round-xl task-background w-full m-2 p-3"
+    >
+      <p class="text-white text-xs">
+        {{ task.startTime }} - {{ task.endTime }}
+      </p>
+      <p class="text-white">
+        <strong>{{ task.title }}</strong>
+      </p>
+    </div>
+  </ng-container>
+    </p-dialog>
+  </div>
+</div>

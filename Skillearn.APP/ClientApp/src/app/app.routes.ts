@@ -11,14 +11,6 @@ export const routes: Routes = [
   {
     path: 'admin', loadChildren: () => import('./modules/admin/admin.module').then(m => m.AdminModule)
   },
-  //{
-  //  path: 'error', component: AppErrorComponent,
-  //  canActivate: [MsalGuard]
-  //},
-  //{
-  //  path: 'access', component: AppAccessdeniedComponent,
-  //  canActivate: [MsalGuard]
-  //},
   {
     path: 'notfound', component: NotFoundComponent,
   },

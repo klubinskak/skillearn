@@ -26,7 +26,20 @@ export class CourseService {
       })
     )
   }
+  
+  public getAllCourses(): Observable<CourseModel[]> {
+    return this.httpClient.get<CourseModel[]>(environment.apiBaseUrl + `/course/getAllCourses`).pipe(
+      catchError((err: any) => {
+        console.log('Error:', err);
+        /* this.sharedService.handleError(err);*/
+        return new Observable<CourseModel[]>((subscriber) => {
+          subscriber.next(undefined);
+        });
+      }), finalize(() => {
 
+      })
+    )
+  }
   
   public getCourseDetail(courseId: number): Observable<CourseModel> {
     return this.httpClient.get<CourseModel>(environment.apiBaseUrl + `/course/getCourseDetail/${courseId}`).pipe(
