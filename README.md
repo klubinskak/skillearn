@@ -26,3 +26,6 @@ Skillearn is your all-in-one learning hub for companies. Tailor-made for organiz
   <li>MongoDB C# Driver</li>
   <li>NUnit</li>
 </ul>
+
+
+![Screenshot 2024-05-26 at 19 48 39 (2)](https://github.com/klubinskak/skillearn/assets/76222513/6dfa661e-e4fe-4aca-85b6-a9b8b826a01e)
